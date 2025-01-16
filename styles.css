@@ -85,9 +85,12 @@ main {
 }
 
 .button__slider:not(.active)::after {
-    content: ' \2B9E';
-    font-size: 1.1em;
-    margin-left: 5px;
+    color:  rgba(4, 252, 16, 0.5);
+    content: '\f061';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    font-size: 1em;
+    margin-left: 20px;
     
     
 }
@@ -98,9 +101,12 @@ main {
 }
 
 .button__slider.active::before {
-    content: '\2B9C';
-    font-size: 1.1em;
-    margin-right: 5px;
+    color: rgba(235, 252, 4, 0.5);
+    content: '\f060';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    font-size: 1em;
+    margin-right: 20px;
 }
 
 .professional__info-container {
@@ -160,7 +166,19 @@ main {
     transform: scale(1.1);
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 620px) {
+    .button__slider:not(.active)::after {
+        margin-left: 5px;
+    }
+
+    .button__slider.active::before {
+        margin-right: 5px;
+    }
+}
+
+
+
+@media screen and (max-width: 477px) {
     .header__container > img {
         height: 150px;
         width: 150px;
@@ -176,7 +194,7 @@ main {
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
     * {
         font-size: 15px;
     }
