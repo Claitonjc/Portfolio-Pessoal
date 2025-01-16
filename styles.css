@@ -85,7 +85,7 @@ main {
 }
 
 .button__slider:not(.active)::after {
-    content: ' \⮞';
+    content: ' \2B9E';
     font-size: 1.1em;
     margin-left: 5px;
     
@@ -98,7 +98,7 @@ main {
 }
 
 .button__slider.active::before {
-    content: '\⮜';
+    content: '\2B9C';
     font-size: 1.1em;
     margin-right: 5px;
 }
