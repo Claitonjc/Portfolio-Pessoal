@@ -10,118 +10,236 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
     <link rel="stylesheet" href="./styles.css" />
     <title>Portifólio Pessoal</title>
   </head>
+
   <body>
-    <header class="header__container">
-      <img src="./assets/122750409-2.jpg" alt="" srcset="" />
+
+    <header>
+      <section class="header__container">
+      <img src="./assets/122750409-2.jpg" alt="imagem do perfil"/>
       <h1>Claiton José Clemes</h1>
-      <p>
-        Sou uma pessoa dedicada, estou sempre buscando dar o meu melhor no que
-        faço. Estou em transição de carreira, sou formado em análise e
-        desenvolvimento de sistemas pela Universidade do Extremo Sul
-        Catarinense(UNESC), ja tenho algumas formações na área de front end, e
-        estou sempre buscando aprender cada vez mais. Busco uma oportunidade
-        para achar meu espaço dentro da área da tecnologia
-      </p>
+      </section>
     </header>
 
     <main>
-      <section class="info">
-        <section class="container__button-slider">
-          <button type="button" class="button__slider">Pessoal</button>
-        </section>
 
-        <div class="personal__info-container">
-          <h1>Informações pessoais</h1>
-          <div class="info__item">
-            <h3>Nome:</h3>
+      <nav class="menu__bar">
+        <ul class="menu__bar-list">
+          <li class="menu__bar-item" data-section="about__me">Sobre mim</li>
+          <li class="menu__bar-item" data-section="personal">Pessoal</li>
+          <li class="menu__bar-item" data-section="professional">Profissional</li>
+          <li class="menu__bar-item" data-section="social">Social</li>
+          <li class="menu__bar-item" data-section="portfolio">Portfólio</li>
+        </ul>
+      </nav>
+
+      <section id="about__me" class="section__container menu__active">
+        <div class="about__me-perfil">
+          <img class="about__me-image" src="./assets/Foto-Claiton.png" alt="" />
+
+          <div class="about__me-info">
+            <h1>Claiton José Clemes</h1>
+            <h4>Front End Developer</h4>
+          </div>
+        </div>
+
+        <h2>Sobre mim</h2>
+        <p>
+          Sou uma pessoa dedicada, comprometida e sempre em busca de evolução.
+          Tenho facilidade para aprender e gosto de enfrentar novos desafios.
+          Atualmente, estou em transição de carreira e vejo na tecnologia uma
+          área promissora, na qual posso unir minha curiosidade, criatividade e
+          capacidade de resolver problemas. Sou formado em Análise e
+          Desenvolvimento de Sistemas pela Universidade do Extremo Sul
+          Catarinense (UNESC) e possuo formações complementares na área de
+          Front-End. Ao longo dos meus estudos, desenvolvi conhecimentos em
+          HTML, CSS, JavaScript e frameworks modernos, além de boas práticas de
+          desenvolvimento. Estou constantemente aprimorando minhas habilidades
+          por meio de cursos, projetos práticos e estudo autodidata. Acredito
+          que a tecnologia tem o poder de transformar realidades, e quero fazer
+          parte desse movimento. Busco uma oportunidade para ingressar na área e
+          aplicar meus conhecimentos em um ambiente desafiador, colaborativo e
+          inovador. Quero crescer profissionalmente e contribuir de forma
+          significativa para a equipe e para os projetos em que estiver
+          envolvido.
+        </p>
+      </section>
+
+      <section id="personal" class="section__container">
+        <h1>Informações pessoais</h1>
+        <div class="personal__container">
+          <div class="personal__item">
+            <img src="./assets/personal-images/name.png" alt="">
+            <h3>Nome</h3>
             <p>Claiton José Clemes</p>
           </div>
-          <div class="info__item">
-            <h3>Idade:</h3>
+
+          <div class="personal__item">
+            <img src="./assets/personal-images/calendario.png" alt="">
+            <h3>Idade</h3>
             <p>36 anos</p>
           </div>
-          <div class="info__item">
-            <h3>Endereço:</h3>
-            <p>Av: Padre Antônio Luiz Dias, S/N</p>
-            <p>Bairro: Vila São José</p>
-            <p>Cidade: Araranguá</p>
-            <p>Estado: SC</p>
+
+          <div class="personal__address-container">
+            <div class="personal__address-title">
+              <img src="./assets/personal-images/endereco.png" alt="">
+              <h3>Endereço</h3>
+            </div>
+            <div class="personal__address-item_container">
+              <div class="personal__address-item">
+                <h4>Rua</h4>
+                <p>Família Alves, 66</p>
+              </div>
+
+              <div class="personal__address-item">
+                <h4>Bairro</h4>
+                <p>Vila São José</p>
+              </div>
+
+              <div class="personal__address-item">
+                <h4>Cidade</h4>
+                <p>Araranguá</p>
+              </div>
+
+              <div class="personal__address-item">
+                <h4>Estado</h4>
+                <p>Santa Catarina</p>
+              </div>
+            </div>
           </div>
-          <div class="info__item">
-            <h3>Telefone:</h3>
+
+          <div class="personal__item">
+            <img src="./assets/personal-images/telefone.png" alt="">
+            <h3>Telefone</h3>
             <p>(48) 9 9864 8228</p>
           </div>
-          <div class="info__item">
-            <h3>Email:</h3>
+
+          <div class="personal__item">
+            <img src="./assets/personal-images/email.png" alt="">
+            <h3>Email</h3>
             <p>ClaitonCharlene@outlook.com</p>
           </div>
         </div>
+      </section>
 
-        <div class="professional__info-container">
-          <h1>Informações profissionais</h1>
-          <div class="info__item">
+      <section id="professional" class="section__container">
+        <h1>Informações profissionais</h1>
+        <div class="professional__container">
+          <div class="professional__info-container">
             <h3>Formação:</h3>
-            <p>Análise e Desenvolvimento de Sistemas - UNESC</p>
+
+            <div class="professional__info-item">
+              <img src="./assets/icons/formacao.png" alt="" />
+              <p>Análise e Desenvolvimento de Sistemas - UNESC</p>
+            </div>
           </div>
-          <div class="info__item">
+
+          <div class="professional__info-container">
             <h3>Qualificações e cursos complementares:</h3>
-            <p>
-              Formação HTML Web Developer, pela Digital Innovation One (DIO).
-            </p>
-            <p>
-              Formação CSS Web Developer, pela Digital Innovation One (DIO).
-            </p>
-            <p>
-              Formação Lógica de Programação, pela Digital Innovation One (DIO).
-            </p>
-            <p>
-              Formação JavaScript Developer, pela Digital Innovation One (DIO).
-            </p>
-            <p>Formação React Developer, pela Digital Innovation One (DIO).</p>
-            <p>
-              Formação Angular Developer, pela Digital Innovation One (DIO).
-            </p>
-            <p>
-              Cursando Formação TypeScript FullStack Developer, pela Digital
-              Innovation One (DIO).
-            </p>
-          </div>
-          <div class="personalProjects">
-            <h3>Projetos Pessoais</h3>
 
-            <h4>Vence Menos</h4>
+            <div class="professional__info-item">
+              <img src="./assets/icons/HTML.png" alt="" />
+              <p>Formação HTML Web Developer, pela Digital Innovation One (DIO).</p>
+            </div>
 
-            <p>
-              Esse projeto é uma aplicação web para gestão de datas de validade
-              de produtos. Foi criado para ser usado por exemplo em
-              supermercados para o controle das validades dos produtos
-              comercializados. Com essa aplicação podemos adicionar, remover e
-              editar produtos e suas ddatas de validades, e também podemos
-              configurar para receber alertas de validades próximas, ou definir
-              qual o período escolhido para recolhimento dos produtos. Esse
-              projeto foi feito a partir de um trabalho de faculdade, onde
-              fizemos o design utilizando o Figma, e depois codificado.
-            </p>
-            <a href="https://github.com/Claitonjc/Vence-Menos"
-              >Projeto Vence Menos</a
-            >
+            <div class="professional__info-item">
+              <img src="./assets/icons/CSS.png" alt="" />
+              <p>Formação CSS Web Developer, pela Digital Innovation One (DIO).</p>
+            </div>
+
+            <div class="professional__info-item">
+              <img src="./assets/icons/logica.png" alt="" />
+              <p>Formação Lógica de Programação, pela Digital Innovation One (DIO).</p>
+            </div>
+
+            <div class="professional__info-item">
+              <img src="./assets/icons/javascript.png" alt="" />
+              <p>Formação JavaScript Developer, pela Digital Innovation One (DIO).</p>
+            </div>
+
+            <div class="professional__info-item">
+              <img src="./assets/icons/react.png" alt="" />
+              <p>Formação React Developer, pela Digital Innovation One (DIO).</p>
+            </div>
+
+            <div class="professional__info-item">
+              <img src="./assets/icons/angular.png" alt="" />
+              <p>Formação Angular Developer, pela Digital Innovation One (DIO).</p>
+            </div>
+
+            <div class="professional__info-item">
+              <img src="./assets/icons/typescript-256.png" alt="" />
+              <p>Cursando Formação TypeScript FullStack Developer, pela Digital
+                Innovation One (DIO).</p>
+            </div>
           </div>
         </div>
-
-        <nav class="social__media">
-          <a
-            href="https://www.linkedin.com/in/claiton-jose-clemes/"
-            target="_blank"
-            >Linkedin</a
-          >
-          <a href="https://github.com/Claitonjc" target="_blank">GitHub</a>
-        </nav>
       </section>
+
+      <section id="social" class="section__container">
+        <h1>Redes Sociais</h1>
+        <div class="social__container">
+            <div class="social__item">
+              <img src="./assets/icons/linkedin.png" alt="" />
+              <a
+                href="https://www.linkedin.com/in/claiton-jose-clemes/"
+                target="_blank"
+                >Linkedin</a
+              >
+            </div>
+            <div class="social__item">
+              <img src="./assets/icons/github.png" alt="" />
+              <a href="https://github.com/Claitonjc" target="_blank">Github</a>
+            </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section__container">
+        <h1>Projetos Pessoais</h1>
+        <div class="portfolio__container">
+          <h3>Vence Menos</h3>
+          <div class="portfolio__container-images">
+            <img
+              class="portfolio__image"
+              src="./assets/project-images/vence-menos-3.png"
+              alt=""
+            />
+            <img
+              class="portfolio__image"
+              src="./assets/project-images/vence-menos-2.png"
+              alt=""
+            />
+            <img
+              class="portfolio__image"
+              src="./assets/project-images/vence-menos-1.png"
+              alt=""
+            />
+          </div>
+
+          <p>
+            Esse projeto é uma aplicação web para gestão de datas de validade de
+            produtos. Foi criado para ser usado por exemplo em supermercados
+            para o controle das validades dos produtos comercializados. Com essa
+            aplicação podemos adicionar, remover e editar produtos e suas datas
+            de validades, e também podemos configurar para receber alertas de
+            validades próximas, ou definir qual o período escolhido para
+            recolhimento dos produtos. Esse projeto foi feito a partir de um
+            trabalho de faculdade, onde fizemos o design utilizando o Figma, e
+            depois foi codificado.
+          </p>
+          <a href="https://github.com/Claitonjc/Vence-Menos"
+            >Projeto Vence Menos</a
+          >
+        </div>
+      </section>
+
     </main>
 
     <script src="./index.js"></script>
