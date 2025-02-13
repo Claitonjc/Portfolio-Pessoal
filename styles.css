@@ -14,8 +14,8 @@ body {
     background: linear-gradient(128deg, rgb(8, 8, 8) 0%, rgb(51, 51, 51) 34%, rgb(0, 0, 0) 95%);
     background-repeat: no-repeat;
     display: flex;
-    flex-direction: column;
     height: 100%;
+    flex-direction: column;
     overflow-x: hidden;
     width: 100%;
 }
@@ -48,7 +48,7 @@ body {
 
 /* Animação do header */
 
-@keyframes slideTop {
+/* @keyframes slideTop {
     0% {
         opacity: 0;
         transform: translateY(100%);
@@ -69,7 +69,7 @@ body {
     100% {
         transform: scale(1);
     }
-}
+} */
 
 
 
@@ -83,7 +83,7 @@ main {
     width: 100%;
 }
 
-@keyframes showMain {
+/* @keyframes showMain {
     0%, 75% {
         opacity: 0;
     }
@@ -91,7 +91,7 @@ main {
     100% {
         opacity: 1;
     }
-}
+} */
 
 /* Estilização do menu */
 
@@ -342,7 +342,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    height: 100vh;
     margin-bottom: 30px;
 }
 
@@ -405,6 +404,27 @@ main {
 
 /* Estilização da section portfolio */
 
+#portfolio {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolio > a {
+    border: 1px solid #FFFFFF;
+    border-radius: 15px;
+    max-width: 200px;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#portfolio > a:hover {
+    border: none;
+    box-shadow: 0px 0px 20px 8px rgba(252, 4, 4, 0.5);
+    color: rgba(252, 4, 4, 0.5);
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.1);
+}
 .portfolio__container {
     align-items: center;
     display: flex;
@@ -416,21 +436,7 @@ main {
     text-decoration: underline;
 }
 
-.portfolio__container > a {
-    border: 1px solid #FFFFFF;
-    border-radius: 15px;
-    max-width: 200px;
-    padding: 10px;
-    transition: transform 0.3s ease-in-out;
-}
 
-.portfolio__container > a:hover {
-    border: none;
-    box-shadow: 0px 0px 20px 8px rgba(252, 4, 4, 0.5);
-    color: rgba(252, 4, 4, 0.5);
-    transition: transform 0.3s ease-in-out;
-    transform: scale(1.1);
-}
 
 .portfolio__container > p {
     text-align: justify;
@@ -467,5 +473,126 @@ main {
 
     .personal__item {
         width: 90%;
+    }
+}
+
+@media screen and (max-width: 665px) {
+    .personal__item > h3 {
+        display: none;
+    }    
+
+    .professional__info-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .personal__address-container {
+        width: 100%;
+    }
+
+    .personal__item {
+        width: 100%;
+    }
+
+    .portfolio__container {
+        flex-direction: column-reverse;
+    }
+
+    .portfolio__container > .portfolio__container-images {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .portfolio__container-images > .portfolio__image {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about__me-perfil > .about__me-image {
+        width: 40%;
+    }
+
+    #about__me > p {
+        font-size: 12px;
+        text-align:center;
+    }
+
+    .about__me-info > h1 {
+        font-size: 18px;
+    }
+
+    .about__me-info > h4 {
+        font-size: 14px;
+    }
+
+    .social__container {
+        width: 90%;
+    }
+
+    .portfolio__container-images > .portfolio__image {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 455px) {
+
+    .header__container > img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .about__me-info > h1 {
+        font-size: 14px;
+    }
+
+    .about__me-info > h4 {
+        font-size: 10px;
+    }
+
+    .personal__item {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .personal__item > p {
+        position: initial;
+        transform: none;
+    }
+
+    .personal__address-item_container > .personal__address-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .personal__address-item > p {
+        position: initial;
+        transform: none;
+    }
+
+    .professional__info-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .about__me-perfil > .about__me-info {
+        align-items: center;
+        margin: 0;
+    }
+
+    #about__me > h2 {
+        font-size: 14px;
+    }
+
+    .social__container {
+        flex-direction: column;
+    }
+
+    .portfolio__container-images > .portfolio__image {
+        width: 80%;
+    }
+    .portfolio__container > p {
+        text-align: center;
     }
 }
