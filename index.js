@@ -1,3 +1,5 @@
+
+
 const menuList = document.querySelector(".menu__bar-list");
 const sections = Array.from(document.querySelectorAll(".section__container"));
 let currentSection = document.querySelector(".menu__active");
@@ -53,3 +55,45 @@ const sectionId = () => {
 };
 sectionId();
 showSection("about__me");
+
+const burguerMenu = () => {
+  const menuBurguer = document.querySelector('.menu__bar-burguer');
+  const menuContainer = document.querySelector('.menu__bar-container');
+  const menuOpen = document.querySelector('.open');
+  const menuClose = document.querySelector('.close');
+
+  menuBurguer.addEventListener('click', () => {
+    if(window.innerWidth <= 450) {
+      if(getComputedStyle(menuList).display === 'flex') {
+        menuList.style.display = 'none'
+        menuContainer.style.height = '80px';
+        menuOpen.style.display = 'flex';
+        menuClose.style.display = 'none';
+      } else {
+        menuList.style.display = 'flex'
+        menuContainer.style.height = 'auto';
+        menuOpen.style.display = 'none';
+        menuClose.style.display = 'flex';
+      }
+    }
+  });
+}
+
+burguerMenu();
+
+// const transformBurguerMenu = () => {
+//   const menuOpen = document.querySelector('.open');
+//   const menuClose = document.querySelector('.close');
+
+//   menuBurguer.addEventListener('click', () => {
+    
+//     if(menuOpen.style.display === 'flex') {
+//       menuOpen.style.display = 'none';
+//       menuClose.style.display = 'flex';
+//     } else {
+//       menuOpen.style.display = 'flex';
+//       menuClose.style.display = 'none';
+//     }
+
+//   })
+// }

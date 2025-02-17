@@ -30,14 +30,21 @@
 
     <main>
 
-      <nav class="menu__bar">
-        <ul class="menu__bar-list">
-          <li class="menu__bar-item" data-section="about__me">Sobre mim</li>
-          <li class="menu__bar-item" data-section="personal">Pessoal</li>
-          <li class="menu__bar-item" data-section="professional">Profissional</li>
-          <li class="menu__bar-item" data-section="social">Social</li>
-          <li class="menu__bar-item" data-section="portfolio">Portfólio</li>
-        </ul>
+      <nav class="menu__bar-container">
+        <div class="menu__bar-burguer">
+          <img class="open" src="./assets/icons/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="">
+          <img class="close" src="./assets/icons/close_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="">
+        </div>
+
+        <div id="menu__bar">
+          <ul class="menu__bar-list">
+            <li class="menu__bar-item" data-section="about__me">Sobre mim</li>
+            <li class="menu__bar-item" data-section="personal">Pessoal</li>
+            <li class="menu__bar-item" data-section="professional">Profissional</li>
+            <li class="menu__bar-item" data-section="social">Social</li>
+            <li class="menu__bar-item" data-section="portfolio">Portfólio</li>
+          </ul>
+        </div>
       </nav>
 
       <section id="about__me" class="section__container menu__active">

@@ -48,7 +48,7 @@ body {
 
 /* Animação do header */
 
-/* @keyframes slideTop {
+@keyframes slideTop {
     0% {
         opacity: 0;
         transform: translateY(100%);
@@ -69,7 +69,7 @@ body {
     100% {
         transform: scale(1);
     }
-} */
+}
 
 
 
@@ -83,7 +83,7 @@ main {
     width: 100%;
 }
 
-/* @keyframes showMain {
+@keyframes showMain {
     0%, 75% {
         opacity: 0;
     }
@@ -91,23 +91,51 @@ main {
     100% {
         opacity: 1;
     }
-} */
+}
 
-/* Estilização do menu */
+/* Estilização do menu hamburguer*/
 
-.menu__bar {
+.menu__bar-container > .menu__bar-burguer {
+    cursor: pointer;
+    display: none;
+    height: 50px;
+    left: 15px;
+    position: absolute;
+    top: 15px;
+    width: 50px;
+}
+
+.open {
+    display: none;
+}
+
+.close {
+    display: none;
+    height: 40px;
+    width: 40px;
+}
+
+/* estilização do menu */
+
+.menu__bar-container {
     align-items: center;
     border: none;
     border-radius: 20px;
     box-shadow: 0px 0px 20px 8px rgba(252, 4, 4, 0.5);
     display: flex;
-    height: 100px;
+    height: 80px;
     margin-top: 40px;
+    position: relative;
     width: 98%;
     
 }
 
-.menu__bar > .menu__bar-list {
+.menu__bar-container > #menu__bar {
+    display: flex;
+    width: 100%;
+}
+
+#menu__bar > .menu__bar-list {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -224,8 +252,13 @@ main {
     margin-bottom: 60px;
 }
 
+.about__me-info > h1 {
+    font-size: 32px;
+}
+
 .about__me-info > h4 {
     color: rgb(168, 168, 168);
+    font-size: 20px;
 }
 
 
@@ -350,7 +383,7 @@ main {
     flex-direction: column;
     gap: 15px;
     margin: auto;
-    width: 80%;
+    width: 70%;
 }
 
 
@@ -362,11 +395,20 @@ main {
     gap: 40px;
     justify-content: flex-start;
     padding: 15px;
+    position: relative;
 }
 
 .professional__info-item > img {
     max-height: 50px;
     max-width:50px;
+}
+
+.professional__info-item > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
 }
 
 /* Estilização da section social */
@@ -404,16 +446,11 @@ main {
 
 /* Estilização da section portfolio */
 
-#portfolio {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
 #portfolio > a {
     border: 1px solid #FFFFFF;
     border-radius: 15px;
     max-width: 200px;
+    margin: auto;
     padding: 10px;
     transition: transform 0.3s ease-in-out;
 }
@@ -486,6 +523,11 @@ main {
         gap: 15px;
     }
 
+    .professional__info-item > p {
+        position: initial;
+        transform: none;
+    }
+
     .personal__address-container {
         width: 100%;
     }
@@ -540,6 +582,39 @@ main {
     .header__container > img {
         height: 200px;
         width: 200px;
+    }
+
+    .menu__bar-container {
+        position: relative;
+    }
+
+    .menu__bar-container > .menu__bar-burguer {
+        display: flex;
+    }
+
+    #menu__bar {
+        display: none;
+        margin: auto;
+        text-align: center;
+    }
+
+    #menu__bar > .menu__bar-list {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .menu__bar-burguer > .close {
+        display: none;
+    }
+
+    .menu__bar-burguer > .open {
+        display: flex;
+    }
+
+    .burguer__active {
+        display: flex;
     }
 
     .about__me-info > h1 {
