@@ -48,7 +48,7 @@ body {
 
 /* Animação do header */
 
-/* @keyframes slideTop {
+@keyframes slideTop {
     0% {
         opacity: 0;
         transform: translateY(100%);
@@ -69,7 +69,7 @@ body {
     100% {
         transform: scale(1);
     }
-} */
+}
 
 
 
@@ -83,7 +83,7 @@ main {
     width: 100%;
 }
 
-/* @keyframes showMain {
+@keyframes showMain {
     0%, 75% {
         opacity: 0;
     }
@@ -91,7 +91,7 @@ main {
     100% {
         opacity: 1;
     }
-} */
+}
 
 /* Estilização do menu hamburguer*/
 
